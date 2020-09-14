@@ -1,0 +1,11 @@
+/* home */
+.homeContainer{
+
+}
+.homeCard:hover{
+  background-color: dimgray;
+}
+.homeCardImg{
+  height: 300px;
+  width: 300px;
+}
