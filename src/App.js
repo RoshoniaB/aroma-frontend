@@ -6,14 +6,13 @@ import Nav from './Components/Nav';
 import { Route } from 'react-router';
 import About from './Components/About';
 import Info from './Components/Info';
-import ShowCart from './Cart/ShowCart'
 import { CartProvider } from './Cart/CartContext';
 function App() {
 	const [wine, setWine] = useState([]);
-	const [cart, setCart] = useState([])
+
 	useEffect(() => {
 		axios
-			.get('http://localhost:8000/wines/')
+			.get('https://aroma-backend.herokuapp.com/wines/')
 			.then((res) => {
 				setWine(res.data);
 			})
@@ -34,7 +33,9 @@ function App() {
 					}}
 				/>
 				<Route path='/about' component={About} />
-				<Route path='/cart/showcart' component={ShowCart} />
+				<Route path='/cart/showcart' 
+				// component={ShowCart} 
+				/>
 				<Route
 					path='/info/:wine'
 					render={(routerProps) => {

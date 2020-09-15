@@ -6,7 +6,7 @@ const Cart = () => {
 
 	return (
 		<div>
-			<span>{cart.length}</span>
+			<span style={{color:'black'}}>{cart.length}</span>
 		</div>
 	);
 };

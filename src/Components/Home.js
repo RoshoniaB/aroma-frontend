@@ -1,7 +1,5 @@
 import React, { useContext } from 'react';
 import { CartContext } from '../Cart/CartContext';
-import ShowCart from '../Cart/ShowCart';
-import { useState } from 'react';
 import '../App.css';
 import { Link } from 'react-router-dom';
 import {
@@ -11,7 +9,7 @@ import {
 	CardColumns,
 	Carousel,
 } from 'react-bootstrap';
-const RED = 'red';
+
 const Home = (props) => {
 	const [cart, setCart] = useContext(CartContext);
 	const addToCart = (wine) => {
@@ -28,13 +26,6 @@ const Home = (props) => {
 		}
 		setCart(newCart);
 	};
-	//   const [wine_type, setwine_type] = useState(RED);
-
-	// 	const getwinesInwine_type = () => {
-	// 		return wine.filter((wine) => wine.wine_type === wine_type);
-	// 	};
-
-	
 	let wine = props.props.map((wine, index) => {
 		return (
 			<Card className='homeCard row text-center'>
@@ -99,7 +90,6 @@ const Home = (props) => {
 				</Carousel>
 				<CardColumns>{wine}</CardColumns>
 			</Container>
-			{/* <ShowCart cart={cart} setCart={setCart} /> */}
 		</div>
 	);
 };
