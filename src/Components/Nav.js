@@ -1,16 +1,13 @@
 import React from 'react';
 import Cart from '../Cart/Cart'
-import ShowCart from '../Cart/ShowCart'
+// import ShowCart from '../Cart/ShowCart'
 import {
 	Nav as ReactNav,
 	Navbar,
-	Button,
-	FormControl,
-	Form,
 	Image,
 } from 'react-bootstrap';
 
-function Nav(props) {
+function Nav() {
 	return (
 		<Navbar className='navbar'>
 			<Navbar.Brand href='/'><h2>Aroma</h2></Navbar.Brand>
@@ -37,12 +34,6 @@ function Nav(props) {
 					</ReactNav.Link>
 				</ReactNav>
 			</Navbar.Collapse>
-			{/* <Form inline>
-				<FormControl type='text' placeholder='Search' className='mr-sm-2' />
-				<Button variant='outline-success'>
-					<Image src='/img/mag.png' className='searchBtn'></Image>
-				</Button>
-			</Form> */}
 			<ReactNav.Link href='/cart/showcart'>
 				<Cart inline />
 				<Image className='cartLink' src='/img/basketIcon.png' />

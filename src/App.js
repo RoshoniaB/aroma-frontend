@@ -8,12 +8,11 @@ import About from './Components/About';
 import Info from './Components/Info';
 import ShowCart from './Cart/ShowCart'
 import { CartProvider } from './Cart/CartContext';
-function App() {
+const App = () => {
 	const [wine, setWine] = useState([]);
-	const [cart, setCart] = useState([])
 	useEffect(() => {
 		axios
-			.get('http://localhost:8000/wines/')
+			.get('https://arcane-thicket-54816.herokuapp.com/wines/')
 			.then((res) => {
 				setWine(res.data);
 			})

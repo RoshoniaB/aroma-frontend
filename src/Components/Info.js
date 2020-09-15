@@ -6,7 +6,7 @@ import axios from 'axios';
 
 function Info(props) {
 	const [wine, setWine] = useState([]);
-	const [cart, setCart] = useContext(CartContext);
+	const [setCart] = useContext(CartContext);
 	const addToCart = () => {
 		setCart((currentState) => [...currentState, wine]);
 		localStorage.setItem('wine', JSON.stringify());
@@ -14,7 +14,7 @@ function Info(props) {
 	useEffect(() => {
 		const id = props.match.params.wine;
 		const getWine = async () => {
-			const url = `http://localhost:8000/wines/${id}`;
+			const url = `https://arcane-thicket-54816.herokuapp.com/wines/${id}`;
 			const result = await axios.get(url);
 			setWine(result.data);
 		};
@@ -46,7 +46,6 @@ function Info(props) {
 							Add to cart
 						</Button>
 					</Card.Body>
-					{/* <Card.Footer className='text-muted'>2 days ago</Card.Footer> */}
 				</Card>
 			</Container>
 			<Card className='bg-dark text-#2b3137 description'>
