@@ -41,7 +41,6 @@ function Info(props) {
 						<hr style={{ border: '1px solid', color: '#4c3557' }} />
 						<Card.Text>{wine.price}</Card.Text>
 						<Button
-							variant='primary'
 							onClick={addToCart}
 							className='p-2 mb-2 bg-dark border-0 text-white'>
 							Add to cart

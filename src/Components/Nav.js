@@ -1,5 +1,5 @@
 import React from 'react';
-import {Cart} from '../Cart/Cart'
+import Cart from '../Cart/Cart'
 import ShowCart from '../Cart/ShowCart'
 import {
 	Nav as ReactNav,
@@ -10,26 +10,26 @@ import {
 	Image,
 } from 'react-bootstrap';
 
-function Nav() {
+function Nav(props) {
 	return (
 		<Navbar className='navbar'>
 			<Navbar.Brand href='/'><h2>Aroma</h2></Navbar.Brand>
 			<Navbar.Toggle aria-controls='basic-navbar-nav' expanded='false' />
 			<Navbar.Collapse className='basic-navbar-nav'>
 				<ReactNav className='mr-auto'>
-					<ReactNav.Link className='link' href='/about'>
+					<ReactNav.Link className='link' href='/'>
 						Red
 					</ReactNav.Link>
-					<ReactNav.Link className='link' href='/about'>
+					<ReactNav.Link className='link' href='/'>
 						White
 					</ReactNav.Link>
-					<ReactNav.Link className='link' href='/about'>
+					<ReactNav.Link className='link' href='/'>
 						Rosé
 					</ReactNav.Link>
-					<ReactNav.Link className='link' href='/about'>
+					<ReactNav.Link className='link' href='/'>
 						Dessert
 					</ReactNav.Link>
-					<ReactNav.Link className='link' href='/about'>
+					<ReactNav.Link className='link' href='/'>
 						Sparkling
 					</ReactNav.Link>
 					<ReactNav.Link className='link' href='/about'>
@@ -44,7 +44,7 @@ function Nav() {
 				</Button>
 			</Form> */}
 			<ReactNav.Link href='/cart/showcart'>
-				<Cart inline/>
+				<Cart inline />
 				<Image className='cartLink' src='/img/basketIcon.png' />
 			</ReactNav.Link>
 		</Navbar>

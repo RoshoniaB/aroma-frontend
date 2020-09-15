@@ -2,6 +2,12 @@
 .homeCard {
 	width: 19rem;
 }
+.app{
+	background-color: #ced4da;
+}
+.homeCardBody{
+	color: #332539;
+}
 .homeCard:hover {
 	background-color: dimgray;
 }
@@ -12,7 +18,11 @@
 	height: 18rem;
 	width: 18rem;
 }
-.homeContainer {
+.carousel{
+	height: 25rem;
+}
+.car-Caption{
+	 color: #6C1D36;
 }
 /* about */
 .about {
@@ -66,4 +76,10 @@
 }
 .wood{
 	height: 20rem;
+}
+.infoBtn:hover {
+	background-color: #eab4a0;
+}
+.infoBtn{
+	color: #eab4a0;
 }

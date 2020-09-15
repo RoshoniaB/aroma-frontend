@@ -8,5 +8,5 @@ export const CartProvider = (props) => {
 		<CartContext.Provider value={[cart, setCart]}>
 			{props.children}
 		</CartContext.Provider>
-	)
+	);
 };

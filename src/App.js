@@ -2,14 +2,15 @@ import React from 'react';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 import Home from './Components/Home';
-import { CartProvider } from './Cart/CartContext';
 import Nav from './Components/Nav';
 import { Route } from 'react-router';
 import About from './Components/About';
 import Info from './Components/Info';
 import ShowCart from './Cart/ShowCart'
+import { CartProvider } from './Cart/CartContext';
 function App() {
 	const [wine, setWine] = useState([]);
+	const [cart, setCart] = useState([])
 	useEffect(() => {
 		axios
 			.get('http://localhost:8000/wines/')
